@@ -1,57 +1,43 @@
-$(document).ready(function(){
+// back-end logic
 
-  $("#form").submit(function(event){
-    event.preventDefault();
-  var userInput = $("#userInput").val();
-  // var numString = userInput.split("");
+
+function countBoop(input) {
   var countArray = [];
-  var newArray = [];
+  var pushArray = [];
 
-  // takes userInput and converts to strings inside array.
-  for (var i = 0; i <= userInput; i++) {
-    var string = i.toString();
-    countArray.push(string);
-  };
-
-  console.log(countArray);
-
-
-
-  // for (var j = 0; j < countArray.length; j++) {
-countArray.forEach(function(count) {
-    if (count.includes("3")) {
-      newArray.push("sorry");
+  // takes input and makes an array with countback strings inside
+  for (var i = 0; i <= input; i++) {
+    countArray.push(i.toString());
+  }
+  // takes countArray and searches each string for numbers 3, 2, 1 and replaces each with corresponding replacement word in order of priority. If numbers do not contain 3, 2 or 1, the actual number is pushed.
+  countArray.forEach(function(digit) {
+    if (digit.includes("3")) {
+      pushArray.push(" I'm sorry, David. I can't do that");
     }
-    else if (count.includes("2")) {
-      newArray.push("boop");
+    else if (digit.includes("2")) {
+      pushArray.push(" Boop!");
     }
-    else if (count.includes("1")) {
-      newArray.push("beep");
+    else if (digit.includes("1")) {
+      pushArray.push(" Beep!");
     }
     else {
-      newArray.push(count);
+      pushArray.push(" " + digit);
     }
-    console.log(newArray);
-
-});
-$("#list").append("<li>" + newArray + "</li>");
-    // if ("1".includes(userInput[i])) {
-    //   newArray.push("beep!");
-    // }
-    // else if ("2".includes(userInput[i])) {
-    //   newArray.push("boop");
-    // }
-    // else if ("3".includes(userInput[i])) {
-    //   newArray.push("sorry");
-    // }
-    // else {
-    //   newArray.push([i]);
-    //   console.log(newArray);
-    // }
+  });
+  return pushArray;
+}
 
 
 
 
 
+
+// front end ui
+$(document).ready(function(){
+  $("#form").submit(function(event){
+    event.preventDefault();
+    var input = $("#userInput").val();
+    var result = countBoop(input);
+    $("#list").append("<li>" + result + "</li>");
   });
 });
