@@ -34,6 +34,7 @@ body {
 
 #label {
   font-weight: bold;
+  margin-right: 10px;
 }
 
 #form {
@@ -41,5 +42,13 @@ body {
   border-style: solid;
   border-radius: 10px;
   border-width: thick;
-background-color: beige;
+background-color: #ccb3ff;
+}
+
+.btn-lg {
+  margin-left: 30px;
+}
+
+#list {
+  display: none;
 }

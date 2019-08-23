@@ -30,9 +30,11 @@ function countBoop(input) {
 $(document).ready(function(){
   $("#form").submit(function(event){
     event.preventDefault();
+    $("#list").show();
     var input = $("#userInput").val();
     var result = countBoop(input);
     // this returns result into an unordered list item
-    $("#list").append("<li>" + result + "</li>");
+    $("#number").html(input);
+    $("#list").append("<p>" + result + "</p>");
   });
 });
