@@ -1,6 +1,4 @@
 // back-end logic
-
-
 function countBoop(input) {
   var countArray = [];
   var pushArray = [];
