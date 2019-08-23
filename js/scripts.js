@@ -34,8 +34,9 @@ $(document).ready(function(){
     $(".result").show();
     var input = $("#userInput").val();
     var result = countBoop(input);
+    var reverseResult= result.reverse();
     // this returns result into an unordered list item
-    $("#list").empty().append("<p>" + result + "</p>");
+    $("#list").empty().append("<p>" + reverseResult + " ...BLASTOFF!" + "</p>");
     $("#number").html(input);
   });
 });
