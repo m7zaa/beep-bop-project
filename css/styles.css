@@ -1,8 +1,6 @@
 .container {
   text-align: center;
 }
-
-
 .display-4 {
   margin-bottom: 50px;
   font-weight: bold;
@@ -12,7 +10,6 @@
   font-stretch: expanded;
   display: inline-block;
 }
-
 .lead {
   margin-bottom: 50px;
   font-weight: bold;
@@ -20,8 +17,6 @@
   font-family: Arial;
   font-size: 30px;
   display: inline-block;
-
-
 }
 .jumbotron {
 margin-top: 50px;
@@ -32,22 +27,17 @@ border-style: ridge;
 border-radius: 10px;
 border-width: thick;
 display: inline-block;
-
 }
-
 body {
-  background-color: lightblue ;
+  background-color: lightgreen ;
   font-family: arial;
   font-size: 20px;
 }
-
 #label {
   font-weight: bold;
   margin-right: 10px;
   display: inline-block;
-
 }
-
 #form {
   padding: 80px;
   border-style: solid;
@@ -56,16 +46,13 @@ body {
   background-color: #b0c7d4;
   display: inline-block;
 }
-
 .btn-lg {
   margin-left: 30px;
 }
-
 #list {
   display: none;
   padding: 80px;
   align-items: center;
-
 }
 .number {
   display: none;

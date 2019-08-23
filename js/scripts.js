@@ -1,8 +1,9 @@
 // back-end logic
+
+// main function
 function countBoop(input) {
   var countArray = [];
   var pushArray = [];
-
   // takes input and makes an array with countback strings inside
   for (var i = 0; i <= input; i++) {
     countArray.push(i.toString());
@@ -25,7 +26,6 @@ function countBoop(input) {
   return pushArray;
 }
 
-
 // front end ui
 $(document).ready(function(){
   $("#form").submit(function(event){
@@ -34,6 +34,7 @@ $(document).ready(function(){
     $(".result").show();
     var input = $("#userInput").val();
     var result = countBoop(input);
+    // reversed array for a countdown
     var reverseResult= result.reverse();
     // this returns result into an unordered list item
     $("#list").empty().append("<p>" + reverseResult + " ...BLASTOFF!" + "</p>");

@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Beep, Boop!</title>
-  </head>
-  <body>
-    <div class="container">
-
-
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Beep, Boop!</title>
+</head>
+<body>
+  <div class="container">
     <div class="jumbotron">
       <h1 class="display-4">Beep Boop!</h1>
       <p class="lead">The Coolest Countback Returner That You Will Ever See!</p>
-
     </div>
     <form id="form">
       <label for="Userinput" id="label">Please enter a number here:</label>
-      <input id="userInput" type="">
-      <button type="submit" a class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
-
+      <input id="userInput" type="number">
+      <button type="submit" onclick="document.body.style.backgroundColor = 'red';" a class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
       <div id="nan">
         <p>Please enter a number between 0-100</p>
       </div>
       <div class="result">
-
-      <div class="number">
-        <p>Countdown from  <span id="number"></span>...</p>
+        <div class="number">
+          <p>Countdown from  <span id="number"></span>...</p>
+        </div>
+        <div id="list">
+        </div>
       </div>
-      <div id="list">
-
-      </div>
-    </div>
-
-  </form>
-
-
-
+    </form>
   </div>
-  </body>
+</body>
 </html>
