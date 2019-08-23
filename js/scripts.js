@@ -26,16 +26,13 @@ function countBoop(input) {
 }
 
 
-
-
-
-
 // front end ui
 $(document).ready(function(){
   $("#form").submit(function(event){
     event.preventDefault();
     var input = $("#userInput").val();
     var result = countBoop(input);
+    // this returns result into an unordered list item
     $("#list").append("<li>" + result + "</li>");
   });
 });

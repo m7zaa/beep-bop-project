@@ -1,11 +1,23 @@
 .display-4 {
   margin-left: 200px;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 
 .lead {
   margin-bottom: 50px;
+  font-weight: bold;
 }
 .jumbotron {
 background-image: url("../img/background.jpg");
+background-size: auto;
+text-align: center;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#label {
+  font-weight: bold;
 }
