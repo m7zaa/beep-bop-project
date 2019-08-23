@@ -4,36 +4,37 @@ $(document).ready(function(){
     event.preventDefault();
   var userInput = $("#userInput").val();
   // var numString = userInput.split("");
-  var beep = ["Beep!"]
-  var boop = ["Boop!"]
-  var sorry = ["I'm sorry, David. I'm afraid I cannot do that."]
-  var nums = ["1", "2", "3"];
+  var countArray = [];
   var newArray = [];
 
-
+  // takes userInput and converts to strings inside array.
   for (var i = 0; i <= userInput; i++) {
-    newArray.push(i);
-    $("#list").append("<li>" + i + "</li>");
+    var string = i.toString();
+    countArray.push(string);
   };
 
+  console.log(countArray);
 
-  for (var i = 0; i < newArray.length; i++) {
-    if ("1".includes(newArray[i])) {
-      newArray.push("beep!");
-    }
-    else if ("2".includes(newArray[i])) {
-      newArray.push("boop");
-    }
-    else if ("3".includes(newArray[i])) {
+
+
+  // for (var j = 0; j < countArray.length; j++) {
+countArray.forEach(function(count) {
+    if (count.includes("3")) {
       newArray.push("sorry");
     }
-    else {
-      newArray.push(newArray[i]);
-      console.log(newArray);
+    else if (count.includes("2")) {
+      newArray.push("boop");
     }
-}
+    else if (count.includes("1")) {
+      newArray.push("beep");
+    }
+    else {
+      newArray.push(count);
+    }
+    console.log(newArray);
 
-
+});
+$("#list").append("<li>" + newArray + "</li>");
     // if ("1".includes(userInput[i])) {
     //   newArray.push("beep!");
     // }
