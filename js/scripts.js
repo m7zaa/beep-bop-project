@@ -31,7 +31,7 @@ $(document).ready(function(){
   $("#form").submit(function(event){
     event.preventDefault();
     $("#list").show();
-    $(".number").show();
+    $(".result").show();
     var input = $("#userInput").val();
     var result = countBoop(input);
     // this returns result into an unordered list item
